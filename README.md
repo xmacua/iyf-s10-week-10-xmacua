@@ -6,18 +6,20 @@
 - **Date:** April 18, 2026
 
 ## Project Description
-Brief description of what you built and why.
+A RESTful API built with Node.js and Express for managing posts. The API supports full CRUD operations with proper error handling, input validation, and request logging middleware.
 
 ## Technologies Used
-- HTML5
-- CSS3
-- JavaScript
-- (list all technologies)
+- Node.js
+-Express.js
+-JavaScript
+-Postman (API Testing)
 
 ## Features
-- Feature 1
-- Feature 2
-- Feature 3
+- Create, Read, Update and Delete posts
+-Input validation middleware
+-Error handling middleware
+-Request logging
+-RESTful routing structure
 
 ## How to Run
 1. Clone this repository
@@ -26,10 +28,10 @@ Brief description of what you built and why.
    Run `npm install` then `npm start`
 
 ## Lessons Learned
-What did you learn while building this project?
+Learned how to structure a backend application with separation of concerns — splitting routes, controllers, and middleware into their own folders for cleaner, maintainable code.
 
 ## Challenges Faced
-What problems did you encounter and how did you solve them?
+Managing middleware order in Express and ensuring proper error responses are returned consistently across all routes.
 
 ## Screenshots (optional)
 ![Screenshot description](path/to/screenshot.png)
