@@ -1,0 +1,230 @@
+{
+  "info": {
+    "_postman_id": "communityhub-api-collection",
+    "name": "CommunityHub API",
+    "description": "RESTful API for managing posts in a community platform",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL}}/api/health",
+          "host": ["{{BASE_URL}}"],
+          "path": ["api", "health"]
+        }
+      }
+    },
+    {
+      "name": "Posts",
+      "item": [
+        {
+          "name": "Get All Posts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/posts",
+              "host": ["{{BASE_URL}}"],
+              "path": ["api", "posts"]
+            }
+          }
+        },
+        {
+          "name": "Get Posts by Author",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/posts?author=John",
+              "host": ["{{BASE_URL}}"],
+              "path": ["api", "posts"],
+              "query": [
+                {
+                  "key": "author",
+                  "value": "John"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Search Posts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/posts?search=Node",
+              "host": ["{{BASE_URL}}"],
+              "path": ["api", "posts"],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "Node"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Posts (Sorted - Popular)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/posts?sort=popular",
+              "host": ["{{BASE_URL}}"],
+              "path": ["api", "posts"],
+              "query": [
+                {
+                  "key": "sort",
+                  "value": "popular"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Posts (Sorted - Newest)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/posts?sort=newest",
+              "host": ["{{BASE_URL}}"],
+              "path": ["api", "posts"],
+              "query": [
+                {
+                  "key": "sort",
+                  "value": "newest"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Posts with Pagination",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/posts?page=1&limit=10",
+              "host": ["{{BASE_URL}}"],
+              "path": ["api", "posts"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Single Post",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/posts/1",
+              "host": ["{{BASE_URL}}"],
+              "path": ["api", "posts", "1"]
+            }
+          }
+        },
+        {
+          "name": "Create Post",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\": \"My New Post\", \"content\": \"This is the content of my new post on CommunityHub platform\", \"author\": \"Jane Developer\"}"
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/posts",
+              "host": ["{{BASE_URL}}"],
+              "path": ["api", "posts"]
+            }
+          }
+        },
+        {
+          "name": "Update Post",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\": \"Updated Post Title\", \"content\": \"This is the updated content of the post with more information\"}"
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/posts/1",
+              "host": ["{{BASE_URL}}"],
+              "path": ["api", "posts", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Post",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/posts/1",
+              "host": ["{{BASE_URL}}"],
+              "path": ["api", "posts", "1"]
+            }
+          }
+        },
+        {
+          "name": "Like Post",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/posts/1/like",
+              "host": ["{{BASE_URL}}"],
+              "path": ["api", "posts", "1", "like"]
+            }
+          }
+        },
+        {
+          "name": "Unlike Post",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/api/posts/1/unlike",
+              "host": ["{{BASE_URL}}"],
+              "path": ["api", "posts", "1", "unlike"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
