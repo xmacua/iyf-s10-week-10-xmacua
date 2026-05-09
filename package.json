@@ -1,0 +1,22 @@
+{
+  "name": "communityhub-api",
+  "version": "1.0.0",
+  "description": "CommunityHub API - A community platform for sharing posts",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "api",
+    "express",
+    "community"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {}
+}
