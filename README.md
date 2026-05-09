@@ -33,8 +33,5 @@ Learned how to structure a backend application with separation of concerns — s
 ## Challenges Faced
 Managing middleware order in Express and ensuring proper error responses are returned consistently across all routes.
 
-## Screenshots (optional)
-![Screenshot description](path/to/screenshot.png)
-
-## Live Demo (if deployed)
-[View Live Demo](https://your-deployed-url.com)
+## Live Demo 
+[View Live Demo](https://github.com/xmacua/iyf-s10-week-10-xmacua.git)
